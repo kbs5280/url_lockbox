@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // createUrl();
+  createUrl();
   getUserUrls();
 
 });

@@ -1,28 +1,31 @@
-// function createUrl() {
-//   $('#create-url').on('click', function(event) {
-//     event.preventDefault();
-//     var title = $('#url-title').val();
-//     var url = $('#url-url').val();
-//
-//     var urlParams = {
-//       url: {
-//         title: title,
-//         url: url
-//       }
-//     }
-//
-//     $.post({
-//       url: 'api/v1/urls',
-//       data: urlParams
-//     })//.then(createUrlHTML)
-//     //.then(renderUserUrl)
-//   })
-// }
+function createUrl() {
+  $('#create-url').on('click', function(event) {
+    event.preventDefault();
+    var title = $('#url-title').val();
+    var url = $('#url-url').val();
 
-//
-// function renderUserUrl( urlData ) {
-//     $("#list-of-urls").prepend(urlData);
-//   }
+    var urlParams = {
+      url: {
+        title: title,
+        url: url
+      }
+    }
+
+    $.post({
+      url: 'api/v1/urls',
+      data: urlParams,
+      error: function(xhr, textStatus, errorThrown){
+       alert('Invalid URL. Please enter a valid URL.');
+      }
+    }).then(getUserUrls)
+    .then(resetForm)
+  })
+}
+
+function handleError(){
+  $('#list-of-urls').prepend('Invalid URL');
+  getUserUrls();
+}
 
 function getUserUrls() {
   $.get({
@@ -45,4 +48,9 @@ function createUrlHTML( urlsData ) {
 
 function renderUserUrls( urlsData ) {
   $("#list-of-urls").html(urlsData);
+}
+
+function resetForm() {
+  $('#url-title').val('')
+  $('#url-url').val('')
 }

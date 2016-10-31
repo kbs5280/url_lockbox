@@ -12,7 +12,7 @@ class Api::V1::UrlsController < ApplicationController
     if url.save
       respond_with(url, location: api_v1_urls_path)
     else
-      respond_with url.errors
+      respond_with url 
     end
   end
 

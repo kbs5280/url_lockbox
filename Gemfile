@@ -16,6 +16,7 @@ gem 'faraday'
 gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
 # gem 'capistrano-rails', group: :development
 gem "responders"
+gem "validate_url"
 
 group :development, :test do
   gem 'byebug', platform: :mri
