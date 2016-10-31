@@ -18,6 +18,8 @@ gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
 gem "responders"
 gem "validate_url"
 gem "rake"
+gem "sprockets", ">= 3.0.0"
+gem "sprockets-es6"
 
 group :development, :test do
   gem 'byebug', platform: :mri
