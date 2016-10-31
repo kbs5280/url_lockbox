@@ -1,4 +1,4 @@
-Enter a username and password.
+Enter a username and password to Sign Up...
 <%= form_for(@user) do |f| %>
   <%= f.label :username %><br>
   <%= f.text_field :username %><br>
@@ -8,5 +8,5 @@ Enter a username and password.
   <%= f.password_field :password_confirmation %><br><br>
   <%= f.label :email_address %><br>
   <%= f.text_field :email_address %><br><br>
-  <%= f.submit 'Create new account', class: "btn btn-primary btn-sm" %>
+  <%= f.submit 'Sign Up', class: "btn btn-primary btn-sm" %>
 <% end %>

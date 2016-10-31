@@ -8,7 +8,7 @@ describe 'When an unauthenticated user is redirected to sign up/sign in', type: 
     expect(current_path).not_to eq root_path
     expect(current_path).to eq dashboard_path
 
-    click_on 'Sign up to create account'
+    click_on 'Sign Up'
 
     expect(current_path).to eq new_user_path
 
@@ -16,7 +16,7 @@ describe 'When an unauthenticated user is redirected to sign up/sign in', type: 
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
     fill_in 'Email address', with: 'username@username.com'
-    click_on 'Create new account'
+    click_on 'Sign Up'
 
     expect(current_path).to eq root_path
     expect(page).to have_content 'Welcome to URL Lockbox'
