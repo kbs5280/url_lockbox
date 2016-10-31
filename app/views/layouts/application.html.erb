@@ -14,7 +14,7 @@
     <%= yield %>
     <% if current_user %>
     <%= "Signed in as: #{current_user.username}" %>
-    <%= link_to 'Logout', logout_path, method: :delete, class: "btn btn-primary btn-sm" %>
+    <%= link_to 'Sign Out', logout_path, method: :delete, class: "btn btn-primary btn-sm" %>
     <% end %>
   </body>
 </html>
