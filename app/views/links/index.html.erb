@@ -1,15 +1,21 @@
-Welcome to URL Lockbox...
+<div class="jumbotron">
+  <div class="hero">
+    <h1>URL Lockbox...</h1>
+    <br><br>
+    <p>Search: </p><input type="text" id="searchUrls" placeholder="Search URL's">
+    <br><br>
+    <p>Enter a URL title and a valid URL.</p>
+    <div class="form">
+      <form>
+        Title:<br>
+        <input type="text" name="title" id="url-title"><br>
+        URL:<br>
+        <input type="text" name="url" id="url-url"><br><br>
+      <input type="submit" value="Submit a link" id="create-url" class="btn btn-primary btn-md"><br><br>
+      </form>
+    </div>
 
-Enter a URL title and a URL.
-<div class="form">
-  <form>
-    Title:<br>
-    <input type="text" name="title" id="url-title"><br>
-    URL:<br>
-    <input type="text" name="url" id="url-url"><br><br>
-  <input type="submit" value="Submit a link" id="create-url" class="btn btn-primary btn-md"><br><br>
-  </form>
-</div>
-
-<div id="list-of-urls">
+    <ul id="list-of-urls">
+    </ul>
+  </div>
 </div>
