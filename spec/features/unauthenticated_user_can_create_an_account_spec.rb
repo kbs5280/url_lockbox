@@ -24,7 +24,7 @@ describe 'When an unauthenticated user is redirected to sign up/sign in', type: 
 end
 
 describe 'When an unauthenticated user creates an account', type: :feature do
-  scenario 'the user fill in password confirmation' do
+  scenario 'the user must fill in password confirmation' do
 
     visit dashboard_path
 

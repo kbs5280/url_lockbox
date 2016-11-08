@@ -16,6 +16,6 @@ describe 'Urls API controller creates a url' do
 
     expect(json[:title]).to eq 'Twitter'
     expect(json[:url]).to eq 'https://twitter.com'
-    expect(json.count).to eq 7
+    expect(json.count).to eq 8
   end
 end
