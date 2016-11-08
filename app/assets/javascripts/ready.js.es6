@@ -6,7 +6,12 @@ $(document).ready(function() {
   markAsUnread();
   updateTitle();
   updateUrl();
+  deleteUrl();
+  filterSearch();
   filterReadUrls();
   filterUnreadUrls();
-  
+  sortAlphabetically();
+  tagUrl();
+  removeTag();
+
 });
