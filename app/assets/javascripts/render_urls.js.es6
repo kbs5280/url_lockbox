@@ -18,6 +18,7 @@ function createUrlHTML( urlsData ) {
       <h5>TITLE: </h5><p contenteditable="true" id="url-title">${urlsData.title}</p></br>
       <h5>URL: </h5><a contenteditable="true" id="url" class="unread" href="${urlsData.url}">${urlsData.url}</a></br></br>
       <button type="button" class="mark-as-unread btn btn-info btn-sm">Mark as unread</button>
+      <button type="button" class="edit btn btn-success btn-sm">Edit</button>
       </div></br>`)
   }
   return $(`
@@ -25,6 +26,7 @@ function createUrlHTML( urlsData ) {
     <h5>TITLE: </h5><p contenteditable='true' id="url-title">${urlsData.title}</p><br>
     <h5>URL: </h5><a contenteditable='true' id="url" href="${urlsData.url}">${urlsData.url}</a></br></br>
     <button type="button" class="mark-as-read btn btn-info btn-sm">Mark as read</button>
+    <button type="button" class="edit btn btn-success btn-sm">Edit</button>
     </li></br>`)
 }
 
