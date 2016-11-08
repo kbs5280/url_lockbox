@@ -19,7 +19,7 @@ describe 'When an unauthenticated user is redirected to sign up/sign in', type: 
     click_on 'Sign Up'
 
     expect(current_path).to eq root_path
-    expect(page).to have_content 'Welcome to URL Lockbox'
+    expect(page).to have_content 'URL Lockbox'
   end
 end
 

@@ -14,7 +14,22 @@
  *= require_self
  */
 
-
  .flash_danger {
    background-color: red;
+ }
+
+ .flash_success {
+   background-color: aquamarine;
+ }
+
+ .hero {
+   padding: 55px;
+ }
+
+ header {
+   margin: 25px;
+ }
+
+ .unread {
+   color: aquamarine;
  }

@@ -1,8 +1,12 @@
-Enter your username and password to Log In.
-<%= form_for :session, url: login_path do |f| %>
-  <%= f.label :email_address %><br>
-  <%= f.text_field :email_address %><br>
-  <%= f.label :password %><br>
-  <%= f.password_field :password %><br>
-  <%= f.submit 'Login', class: "btn btn-primary btn-sm" %>
-<% end %>
+<div class="jumbotron">
+  <div class="hero">
+    <p>Enter your username and password to Log In.</p>
+    <%= form_for :session, url: login_path do |f| %>
+      <%= f.label :email_address %><br>
+      <%= f.text_field :email_address %><br>
+      <%= f.label :password %><br>
+      <%= f.password_field :password %><br>
+      <%= f.submit 'Login', class: "btn btn-primary btn-sm" %>
+    <% end %>
+  </div>
+</div>

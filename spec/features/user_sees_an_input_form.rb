@@ -1,8 +1,5 @@
 require 'rails_helper'
 
-# As an authenticated user viewing the main page (links#index),
-# I should see a simple form to submit a link.
-
 describe 'When a user visits the links index', type: :feature do
   scenario 'the user sees a form to submit a link' do
     user = User.create(username: 'username',

@@ -1,5 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Url, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Url, type: :model do
+
+  it { should belong_to(:user) }
+  it { should validate_uniqueness_of(:title) }
+
 end
