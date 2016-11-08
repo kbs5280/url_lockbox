@@ -12,8 +12,24 @@ class Api::V1::UrlsController < ApplicationController
     if url.save
       respond_with(url, location: api_v1_urls_path)
     else
-      respond_with url 
+      respond_with url
     end
+  end
+
+  def update
+    url = Url.find(params[:id])
+    url.update_attribute(:read, params[:url][:read]) if params[:url][:read]
+    url.update_attribute(:title, params[:url][:title]) if params[:url][:title]
+    url.update_attribute(:url, params[:url][:url]) if params[:url][:url]
+    if url.save
+      respond_with(url, location: api_v1_urls_path)
+    else
+      respond_with url
+    end
+  end
+
+  def destroy
+    Url.destroy(params[:id])
   end
 
   private
