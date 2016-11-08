@@ -35,6 +35,6 @@ class Api::V1::UrlsController < ApplicationController
   private
 
     def url_params
-      params.require(:url).permit(:title, :url, :read)
+      params.require(:url).permit(:title, :url, :read, :user_id)
     end
 end

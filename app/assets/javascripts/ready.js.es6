@@ -6,5 +6,7 @@ $(document).ready(function() {
   markAsUnread();
   updateTitle();
   updateUrl();
-
+  filterReadUrls();
+  filterUnreadUrls();
+  
 });
