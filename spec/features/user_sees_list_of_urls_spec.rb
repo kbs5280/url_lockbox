@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'When a user visits the links index', type: :feature do
   let(:user){ create(:user) }
-  let(:url){ create(:url, user: user) }
+  let(:url){ create(:url, user: user, title: 'Title') }
 
   scenario 'the user sees URLs', :js => true do
 
@@ -11,5 +11,6 @@ describe 'When a user visits the links index', type: :feature do
     visit root_path
 
     expect(page).to have_content 'Enter a URL title'
+    expect(page).to have_content 'Title'
   end
 end

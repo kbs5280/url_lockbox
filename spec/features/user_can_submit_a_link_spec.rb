@@ -12,8 +12,8 @@ describe 'When a user visits the links index', type: :feature do
 
     expect(page).to have_content 'Enter a URL title'
 
-    fill_in 'title', with: 'Amazon Instant'
-    fill_in 'url', with: 'https://www.amazon.com/Instant-Video/b?node=2858778011'
+    fill_in 'title', with: 'Twitter'
+    fill_in 'url', with: 'https://twitter.com'
     click_on 'Submit a link'
 
     expect(page).to have_content 'Amazon Instant'
