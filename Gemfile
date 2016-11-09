@@ -18,6 +18,7 @@ gem "validate_url"
 gem "rake"
 gem "sprockets", ">= 3.0.0"
 gem "sprockets-es6"
+gem 'selenium-webdriver', '~> 2.53'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -31,7 +32,6 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
-  gem 'selenium-webdriver'
   gem 'faker'
 end
 

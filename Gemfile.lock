@@ -264,7 +264,7 @@ DEPENDENCIES
   responders
   rspec-rails
   sass-rails (~> 5.0)
-  selenium-webdriver
+  selenium-webdriver (~> 2.53)
   shoulda-matchers
   simplecov
   sprockets (>= 3.0.0)
