@@ -1,1 +1,3 @@
-[Production App](https://url-lockbox.herokuapp.com/)
+# URLockbox
+
+[App in Production](https://url-lockbox.herokuapp.com/)
