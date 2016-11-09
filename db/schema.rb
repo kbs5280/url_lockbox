@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108212354) do
+ActiveRecord::Schema.define(version: 20161109221225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "url_tags", force: :cascade do |t|
+    t.integer "url_id"
+    t.integer "tag_id"
+    t.index ["tag_id"], name: "index_url_tags_on_tag_id", using: :btree
+    t.index ["url_id"], name: "index_url_tags_on_url_id", using: :btree
+  end
 
   create_table "urls", force: :cascade do |t|
     t.string   "title"
@@ -22,7 +33,6 @@ ActiveRecord::Schema.define(version: 20161108212354) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "url"
-    t.string   "tag",        default: ""
     t.index ["user_id"], name: "index_urls_on_user_id", using: :btree
   end
 
@@ -35,5 +45,7 @@ ActiveRecord::Schema.define(version: 20161108212354) do
     t.string   "email_address"
   end
 
+  add_foreign_key "url_tags", "tags"
+  add_foreign_key "url_tags", "urls"
   add_foreign_key "urls", "users"
 end

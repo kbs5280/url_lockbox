@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :unread_urls, only: [:index]
       resources :sort_alphabetically, only: [:index]
       resources :associated_tags, only: [:index]
+      resources :tags, only: [:create]
     end
   end
 end

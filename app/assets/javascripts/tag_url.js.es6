@@ -2,17 +2,19 @@ function tagUrl() {
   $('#list-of-urls').on('blur', '#add-tag', function(){
 
     var $url = $(this).closest('.url')
-    var $tag = $(this).parent().find('#add-tag').html()
+    var $tags = $(this).parent().find('#add-tag').html()
 
-    var updateTag = {
+    var createTag = {
       url: {
-        tag: $tag
+        tags: $tags,
+        urlId: $url.data('id')
       }
     }
+
     $.ajax({
-      url: 'api/v1/urls/' + $url.data('id') + '.json',
-      data: updateTag,
-      method: 'PUT',
+      url: 'api/v1/tags/',
+      data: createTag,
+      method: 'POST',
       error: function(xhr, textStatus, errorThrown){
        alert('Tag not updated.');
        getUserUrls();
