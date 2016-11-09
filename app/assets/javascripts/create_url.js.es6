@@ -15,7 +15,7 @@ function createUrl() {
       url: 'api/v1/urls',
       data: urlParams,
       error: function(xhr, textStatus, errorThrown){
-       alert('Please enter a valid URL and a unique title.');
+      //  alert('Please enter a valid URL and a unique title.');
       }
     }).then(getUserUrls)
     .then(resetForm)
