@@ -1,6 +1,6 @@
 NOTE: This was a timed assessment from the Turing School. Due to the large amount of progress required in a short amount of time there is significant room for improvement and refactoring.
 
-* The JavaScript is poorly organized and the ES5 syntax would be improved with the use of ES6 classes.
+* The JavaScript is a disaster and poorly organized and the ES5 syntax would be improved with the use of ES6 classes.
 * The Rails controllers also have logic that can likely be extracted to the models.
 * The barebones styling utilized bootstrap and is not very user-friendly.
 
